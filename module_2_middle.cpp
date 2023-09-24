@@ -58,7 +58,15 @@ bool itc_mirror_num(long long number)
 }
 int itc_mirror_count(long long number)
 {
-    return 0;
+    int col = 0;
+    for (int i = 0; i<number; i++)
+    {
+        if (itc_mirror_num(i))
+        {
+            col++;
+        }
+    }
+    return col;
 }
 int itc_second_max_num(long long number) {
     if (number <= 9) {
