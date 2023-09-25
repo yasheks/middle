@@ -43,18 +43,16 @@ int itc_null_count(long long number)
 }
 bool itc_mirror_num(long long number)
 {
-    string strNum = to_string(number);
-    int sizs = strNum.length();
-
-    for (int i = 0; i < sizs / 2; i++)
+    long long mirror = 0, temp = number;
+    while (temp > 0)
     {
-        if (strNum[i] != strNum[sizs - i - 1])
-        {
-            return false;
-        }
+        mirror = mirror * 10 + temp%10;
+        temp /= 10;
     }
-
-    return true;
+    if (mirror == number)
+        return true;
+    else
+        return false;
 }
 int itc_mirror_count(long long number)
 {
