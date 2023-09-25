@@ -85,7 +85,7 @@ int itc_second_max_num(long long number) {
     while (number > 0) {
         int digit = number % 10;
 
-        if (digit >= max1) {
+        if (digit > max1) {
             max2 = max1;
             max1 = digit;
         } else if (digit > max2 && digit != max1) {
@@ -111,7 +111,7 @@ int itc_second_simple_max_num(long long number)
     while (number > 0) {
         int digit = number % 10;
 
-        if (digit >= max1) {
+        if (digit > max1) {
             max2 = max1;
             max1 = digit;
         } else if (digit > max2 && digit != max1) {
