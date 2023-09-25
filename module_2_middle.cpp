@@ -1,6 +1,8 @@
 int itc_min_num(long long number)
 {
     int maxi = 10, num;
+    if (number < 0)
+        number = -number;
      while(number!=0)
     {
         num = number%10;
