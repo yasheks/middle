@@ -18,12 +18,14 @@ int itc_rev_num(long long number)
 {
 
     int score = 0;
+    while (number%10 == 0)
+        {
+            number = number/10;
+        }
+
     while (number!= 0)
     {
-        if(number%10 != 0)
-        {
-            score++;
-        }
+        score++;
 
         number = number/10;
     }
@@ -32,6 +34,8 @@ int itc_rev_num(long long number)
 int itc_null_count(long long number)
 {
     int score = 0;
+    if(number == 0)
+        score = 1;
     while (number!= 0)
     {
         if(number%10 == 0)
@@ -61,14 +65,16 @@ int itc_mirror_count(long long number)
     int col = 0;
     for (int i = 0; i<number; i++)
     {
-        if (itc_mirror_num(i))
+        if (itc_mirror_num(i) == 1)
         {
             col++;
         }
     }
-    return col;
+    return col -1;
 }
 int itc_second_max_num(long long number) {
+    if (number < 0)
+        number = -number;
     if (number <= 9) {
         return -1;
     }
@@ -93,6 +99,8 @@ int itc_second_max_num(long long number) {
 }
 int itc_second_simple_max_num(long long number)
 {
+    if (number < 0)
+        number = -number;
     if (number <= 9) {
         return -1;
     }
