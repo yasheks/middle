@@ -3,6 +3,8 @@ int itc_min_num(long long number)
     int maxi = 10, num;
     if (number < 0)
         number = -number;
+    if (number == 0)
+        return 0;
      while(number!=0)
     {
         num = number%10;
@@ -18,6 +20,10 @@ int itc_rev_num(long long number)
 {
 
     int score = 0;
+    if (number < 0)
+        number = -number;
+    if (number == 0)
+        return 1;
     while (number%10 == 0)
         {
             number = number/10;
@@ -34,6 +40,8 @@ int itc_rev_num(long long number)
 int itc_null_count(long long number)
 {
     int score = 0;
+    if (number < 0)
+        number = -number;
     if(number == 0)
         score = 1;
     while (number!= 0)
