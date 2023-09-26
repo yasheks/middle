@@ -16,7 +16,8 @@ int itc_rev_covert_num(long long number, int ss)
 {
     int dec = 0;
     int multiplier = 1;
-
+    if (ss == 10)
+        return number;
     while (number != 0) {
         int digit = number % 10;
         dec += digit * multiplier;
