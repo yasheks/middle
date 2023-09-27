@@ -71,7 +71,7 @@ bool itc_mirror_num(long long number)
 int itc_mirror_count(long long number) {
     int col = 0;
     for (long long i = 1; i <= number; i++) {
-        if (itc_mirror_num(i)) 
+        if (itc_mirror_num(i) == 1) 
         {
             col++;
         }
